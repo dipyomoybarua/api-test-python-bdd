@@ -1,0 +1,30 @@
+# Ignore Python bytecode files
+utils/__pycache__/
+
+# Ignore virtual environment directories
+venv/
+.venv/
+/my_python_project_env/
+
+# Ignore IDE or editor settings
+.vscode/
+.idea/
+*.iml
+.DS_Store
+
+# Ignore generated files and directories
+dist/
+build/
+*.egg-info/
+*.log
+*.tmp
+
+# Ignore sensitive or environment-specific files
+.env
+.env.*
+
+# Ignore backup files
+*~
+
+# Ignore reports
+/reports/
