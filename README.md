@@ -25,3 +25,4 @@ headers:
 endpoints:
   pet: "/pet"
   order: "/store"
+  user: "/user"
