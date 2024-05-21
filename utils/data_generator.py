@@ -31,3 +31,18 @@ class DataGenerator:
             "status": self.fake.random_element(elements=("placed", "approved", "delivered")),
             "complete": self.fake.boolean()
         }
+    
+    def generate_user_data(self):
+        return [
+            {
+                "id": 0,
+                "username": "string",
+                "firstName": "string",
+                "lastName": "string",
+                "email": "string",
+                "password": "string",
+                "phone": "string",
+                "userStatus": 0
+            }
+        ]
+
