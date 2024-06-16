@@ -21,6 +21,7 @@ Directory Structure:-
 Now clone the repository.
 Install the dependencies:**pip install -r requirements.txt**
 Set the python path for the powershell :- **$env:PYTHONPATH=E:\path\to\your\project\api_test_framework:PYTHONPATH"**
+
 Run the tests using the following command: **pytest tests/ --html=reports/pytest_report.html --self-contained-html**
 
 **Configuration**:-
