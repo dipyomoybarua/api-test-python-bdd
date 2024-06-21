@@ -28,7 +28,7 @@ pipeline {
         stage('Run Tests in Parallel') {
             steps {
                 script {
-                    def parallelism = 3
+                    def parallelism = 4
 
                     bat """
                         call venv\\Scripts\\activate
