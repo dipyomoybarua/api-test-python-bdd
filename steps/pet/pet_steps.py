@@ -1,4 +1,4 @@
-from behave import given, when, then
+from pytest_bdd import given, when, then
 from utils.api_client import APIClient
 from utils.data_generator import DataGenerator
 from utils.logger import logger

@@ -4,3 +4,5 @@ pytest
 pytest-html
 Faker
 behave
+pytest-bdd
+pytest-xdist
