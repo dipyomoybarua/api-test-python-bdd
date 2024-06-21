@@ -42,7 +42,7 @@ pipeline {
 
     post {
         success {
-            archiveArtifacts artifacts: '**/results/*', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/reports/*', allowEmptyArchive: true
             echo 'Pipeline completed successfully.'
         }
         failure {
