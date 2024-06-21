@@ -15,9 +15,9 @@ pipeline {
             steps {
                 script {
                     // Install dependencies using a Python virtual environment
-                    sh '''
+                    bat '''
                         python -m venv venv
-                        . venv/bin/activate
+                        call venv\\Scripts\\activate
                         pip install --upgrade pip
                         pip install -r requirements.txt
                     '''
@@ -29,8 +29,8 @@ pipeline {
                 script {
                     def parallelism = 3
 
-                    sh """
-                        . venv/bin/activate
+                    bat """
+                        call venv\\Scripts\\activate
                         pytest -n ${parallelism}
                     """
                 }
