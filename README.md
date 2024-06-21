@@ -1,6 +1,6 @@
 API Test Framework:-
 
-This is the testing framework for **https://petstore.swagger.io/** using Behave for BDD and pytest for unit tests.
+This is the testing framework for **https://petstore.swagger.io/** using Pytest BDD and pytest for unit tests.
 
 Directory Structure:- 
 
