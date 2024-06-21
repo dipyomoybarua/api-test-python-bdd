@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         GITHUB_CREDENTIALS = 'github-credentials-id'
+        PYTHONPATH = "${env.WORKSPACE}"
     }
 
     stages {
@@ -31,6 +32,7 @@ pipeline {
 
                     bat """
                         call venv\\Scripts\\activate
+                        set PYTHONPATH=%WORKSPACE%
                         pytest -n ${parallelism}
                     """
                 }
