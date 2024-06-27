@@ -6,6 +6,9 @@ my_python_project_env/
 venv/
 .venv/
 
+# Ignore all HTML files
+*.html
+
 # Ignore IDE or editor settings
 .vscode/
 .idea/
