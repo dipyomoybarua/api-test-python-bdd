@@ -1,5 +1,8 @@
 # Ignore Python bytecode files
 utils/__pycache__/
+__pycache__
+.pytest_cache/
+tests/__pycache__/
 
 # Ignore virtual environment directories
 my_python_project_env/
