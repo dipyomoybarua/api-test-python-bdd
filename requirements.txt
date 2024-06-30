@@ -6,3 +6,4 @@ Faker
 behave
 pytest-bdd
 pytest-xdist
+coverage

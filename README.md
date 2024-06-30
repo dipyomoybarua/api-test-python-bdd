@@ -36,3 +36,25 @@ endpoints:
   pet: "/pet"
   order: "/store"
   user: "/user"
+
+Test Coverage: 
+
+The framework uses `coverage` to measure test effectiveness, showing which parts of the codebase are tested.
+
+### Running Coverage and Viewing Report
+
+To generate and view the HTML coverage report:
+
+python -m coverage html
+
+To open the HTML report in your default web browser:
+
+start htmlcov/index.html
+
+
+
+
+
+
+
+
