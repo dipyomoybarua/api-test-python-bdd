@@ -50,11 +50,3 @@ python -m coverage html
 To open the HTML report in your default web browser:
 
 start htmlcov/index.html
-
-
-
-
-
-
-
-
