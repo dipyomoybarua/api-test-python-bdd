@@ -6,36 +6,50 @@ pipeline {
         PYTHONPATH = "${env.WORKSPACE}"
     }
 
+    options {
+        timestamps() 
+        buildDiscarder(logRotator(numToKeepStr: '10')) 
+    }
+
+    triggers {
+        githubPush() // Trigger the pipeline on push events from GitHub
+    }
+
     stages {
         stage('Checkout') {
             steps {
                 git credentialsId: env.GITHUB_CREDENTIALS, url: 'https://github.com/dipyomoybarua/api-test-python-behave.git'
             }
         }
-        stage('Set up Python Environment') {
+
+        stage('Build') {
             steps {
                 script {
-                    // Install dependencies using a Python virtual environment
+                    // Example: Build your code
+                    bat 'echo Building your code...'
+                    // Add your build commands here
+                }
+            }
+        }
+
+        stage('Automated Tests') {
+            steps {
+                script {
+                    // Example: Run automated tests
                     bat '''
                         python -m venv venv
                         call venv\\Scripts\\activate
                         pip install --upgrade pip
                         pip install -r requirements.txt
+                        pytest
                     '''
                 }
             }
         }
-        stage('Run Tests in Parallel') {
-            steps {
-                script {
-                    def parallelism = 4
 
-                    bat """
-                        call venv\\Scripts\\activate
-                        set PYTHONPATH=%WORKSPACE%
-                        pytest -n ${parallelism}
-                    """
-                }
+        stage('Manual Approval') {
+            steps {
+                input message: 'Proceed with deployment?', ok: 'Deploy'
             }
         }
     }
